@@ -7,9 +7,9 @@ var tablePosition = racer_table.querySelectorAll("td");
 
 
 for (var i = 0; i < tablePosition.length; i++) {
-    tablePosition[i]. addEventListener("keypress", advancePosition);
+    tablePosition[i]. addEventListener("click", advancePosition);
 };
 
-function changePosition() {
-    console.log(this);
+function advancePosition() {
+    this.className = "active";
 }
