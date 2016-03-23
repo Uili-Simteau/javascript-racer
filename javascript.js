@@ -8,11 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var player2Track = document.querySelector('#player2_strip');
   var playerPosition = document.querySelectorAll('.active');
   var tablePosition = document.querySelectorAll("td");
+
+  var player1 = player1Track.querySelector('td');
+  var player2 = player2Track.querySelector('td');
+
 //test
 
 //add a looping counter for td, or should this be <tr>?
-    for (var i = 0; i < playerPosition.length; i++) {
-    if (playerPosition[i]. addEventListener("keyup", updatePlayerPosition, false);
+   for (var i = 1; i < tablePosition.length; i++) {
+    tablePosition[i].addEventListener("keypress", updatePlayerPosition, false);
     };
 
     if (player1Track.className = .active) {
@@ -25,9 +29,20 @@ td to "", the next td tag is changed to class "active"*/
 
 
     function updatePlayerPosition(event) {
-    if (event.which = 13) {
-        player1.className = "active";
-        this.previousElementSibling.className = "";  }
+    if (event.which === 13) {
+        changePosition(player1);
+    }
+
+    if (event.which === 97) {
+        changePosition(player2);
+    }
 
 };
 });
+
+    function changePosition(player) {
+    if (tablePosition.className = "active") {
+    tablePosition.className = "";
+    tablePosition.nextElementSibling.className = "active";
+}
+};
