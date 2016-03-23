@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 //call all the elements I think I need
   var racerTable = document.querySelector('.racer_table');
 
-  var player1 = document.querySelector('#player1_strip');
-  var player2 = document.querySelector('#player2_strip');
+  var player1Track = document.querySelector('#player1_strip');
+  var player2Track = document.querySelector('#player2_strip');
   var playerPosition = document.querySelectorAll('.active');
   var tablePosition = document.querySelectorAll("td");
+//test
 
 //add a looping counter for td, or should this be <tr>?
     for (var i = 0; i < playerPosition.length; i++) {
