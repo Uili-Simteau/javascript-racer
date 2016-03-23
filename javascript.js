@@ -1,25 +1,28 @@
-var racerTable = document.querySelector('.racer_table')
+document.addEventListener('DOMContentLoaded', function() {
+  //run the code
 
-var player1 = document.querySelector('#player1_strip');
-var player2 = document.querySelector('#player2_strip');
-var playerPosition = document.querySelector('.active');
-var tablePosition = document.querySelectorAll("td");
+//call all the elements I think I need
+  var racerTable = document.querySelector('.racer_table');
 
+  var player1 = document.querySelector('#player1_strip');
+  var player2 = document.querySelector('#player2_strip');
+  var playerPosition = document.querySelectorAll('.active');
+  var tablePosition = document.querySelectorAll("td");
 
-for (var i = 0; i < tablePosition.length; i++) {
-    tablePosition[i]. addEventListener("keyup", updatePlayerPosition, false);
-};
-
-function updatePlayerPosition(player1) {
-    this.className = "active";
-    this.previousElementSibling.className = "";
-}
-
-function advancePosition2(event) {
-    if (event.which = 13) {
-        this.className = "active";
-        this.previousElementSibling.className = "";
+//add a looping counter for td, or should this be <tr>?
+    for (var i = 0; i < playerPosition.length; i++) {
+    playerPosition[i]. addEventListener("keyup", updatePlayerPosition, false);
     };
 
+/*this function should identify if the td has a class "active".
+when the specific key is pressed, the class is changed on the current active
+td to "", the next td tag is changed to class "active"*/
 
-}
+
+    function updatePlayerPosition(event) {
+    if (event.which = 13) {
+        player1.className = "active";
+        this.previousElementSibling.className = "";  }
+
+};
+});
