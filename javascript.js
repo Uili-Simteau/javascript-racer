@@ -31,11 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 };
-});
 
+// this is the change function that fires when called
     function changePosition(player) {
     if (tablePosition.className = "active") {
     tablePosition.className = "";
     tablePosition.nextElementSibling.className = "active";
 }
 };
+});
