@@ -12,8 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //add a looping counter for td, or should this be <tr>?
     for (var i = 0; i < playerPosition.length; i++) {
-    playerPosition[i]. addEventListener("keyup", updatePlayerPosition, false);
+    if (playerPosition[i]. addEventListener("keyup", updatePlayerPosition, false);
     };
+
+    if (player1Track.className = .active) {
+
+    }
 
 /*this function should identify if the td has a class "active".
 when the specific key is pressed, the class is changed on the current active
