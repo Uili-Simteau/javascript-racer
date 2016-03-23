@@ -9,24 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
   var playerPosition = document.querySelectorAll('.active');
   var tablePosition = document.querySelectorAll("td");
 
-  var player1 = player1Track.querySelector('td');
-  var player2 = player2Track.querySelector('td');
+  var player1 = player1Track.querySelectorAll('td');
+  var player2 = player2Track.querySelectorAll('td');
 
-//test
 
-//add a looping counter for td, or should this be <tr>?
+
+//add a looping counter for table body
    for (var i = 1; i < tablePosition.length; i++) {
     tablePosition[i].addEventListener("keypress", updatePlayerPosition, false);
     };
 
-    if (player1Track.className = .active) {
-
-    }
-
-/*this function should identify if the td has a class "active".
-when the specific key is pressed, the class is changed on the current active
-td to "", the next td tag is changed to class "active"*/
-
+//depending on which key is pressed, it will update "active" to the next sibling element
 
     function updatePlayerPosition(event) {
     if (event.which === 13) {
