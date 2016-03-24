@@ -32,11 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
 
-//depending on which key is pressed, it will update "active" to the next sibling element
-
-    function updatePlayerPosition(event) {
+//enacted everytime a key is released
+function updatePlayerPosition(event) {
+    //if 'a' is pressed player 1
     if (event.which === 13) {
+//change position function is called on player 1, start position is incremented
         changePosition(player1);
+        if (player1Track[start1].className = "active") {
+            player1Track[start1].className = "active";
+            player1Track[start1-1].className = "";
+            start1 +=1;
+        }
+    //if enter is pressed, update changes on player 2
     } else if (event.which === 97) {
         changePosition(player2);
     };
@@ -45,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // this is the change function that fires when called
     function changePosition() {
+    //during race, active class is
     if (tablePosition.nextElementSibling.className = "finish") {
     propmt("You've finished the Race!")
 }
