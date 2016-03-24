@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var player1 = player1Track.querySelectorAll('td');
   var player2 = player2Track.querySelectorAll('td');
 
+//starting state? where
+
+//finishing state?
+
 
 
 //add a looping counter for table body
@@ -24,17 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function updatePlayerPosition(event) {
     if (event.which === 13) {
         changePosition(player1);
-    }
-
-    if (event.which === 97) {
+    } else if (event.which === 97) {
         changePosition(player2);
-    }
+    };
 
 };
 
 // this is the change function that fires when called
-    function changePosition(player) {
-    if (tablePosition.className = "active") {
+    function changePosition() {
+    if (tablePosition.nextElementSibling.className = "finish") {
+    propmt("You've finished the Race!")}
+    else if (tablePosition.className = "active") {
     tablePosition.className = "";
     tablePosition.nextElementSibling.className = "active";
 }
