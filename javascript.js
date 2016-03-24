@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var player2Track = document.querySelector('#player2_strip');
   var playerPosition = document.querySelectorAll('.active');
   var tablePosition = document.querySelectorAll("td");
+  var lengthOfTrack = "#";
+
 
   var player1 = player1Track.querySelectorAll('td');
   var player2 = player2Track.querySelectorAll('td');
@@ -37,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // this is the change function that fires when called
     function changePosition() {
     if (tablePosition.nextElementSibling.className = "finish") {
-    propmt("You've finished the Race!")}
+    propmt("You've finished the Race!")
+}
     else if (tablePosition.className = "active") {
     tablePosition.className = "";
     tablePosition.nextElementSibling.className = "active";
