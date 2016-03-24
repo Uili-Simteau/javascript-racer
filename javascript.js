@@ -43,9 +43,20 @@ function updatePlayerPosition(event) {
             player1Track[start1-1].className = "";
             start1 +=1;
         }
+            else if (player1Track[start1].className = "finish") {
+                player1Track[start1-1].className = "";
+                alert("Congratulations Star racer, you've won!");
+                restart = confirm("Play again?");
+                //if
+            }
+        }
     //if enter is pressed, update changes on player 2
     } else if (event.which === 97) {
         changePosition(player2);
+        (player1Track[start1].className = "active") {
+            player1Track[start1].className = "active";
+            player1Track[start1-1].className = "";
+            start1 +=1;
     };
 
 };
