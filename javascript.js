@@ -31,16 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     parsec.className = "planet"
                 }
 
-//starting state? where
-
-//finishing state?
-
-
-
-//add a looping counter for table body
-   for (var i = 1; i < tablePosition.length; i++) {
-    tablePosition[i].addEventListener("keypress", updatePlayerPosition, false);
-    };
 
 //depending on which key is pressed, it will update "active" to the next sibling element
 
