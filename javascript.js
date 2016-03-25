@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var restart = false;
 
 
-  lengthOfTrack = propmt("How far do you want to race? 1-20 parsecs?";
+  lengthOfTrack = promt("How far do you want to race? 1-20 parsecs?");
 
 
 //create how long the track is
