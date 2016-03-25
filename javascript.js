@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var start2 =1;
   var race = document.addEventListener('keyup', updatePlayerPosition);
   var lengthOfTrack = 7;
-  restart = false;
+  var restart = false;
 
 
   lengthOfTrack = propmt("How far do you want to race? 1-20 parsecs?";
