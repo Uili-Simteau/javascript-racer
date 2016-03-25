@@ -94,15 +94,6 @@ function restartGame() {
 
         restart = false;
     };
-// this is the change function that fires when called
-    function changePosition() {
-    //during race, active class is
-    if (tablePosition.nextElementSibling.className === "finish") {
-    propmt("You've finished the Race!")
-}
-    else if (tablePosition.className === "active") {
-    tablePosition.className = "";
-    tablePosition.nextElementSibling.className = "active";
-}
+
 };
 })
