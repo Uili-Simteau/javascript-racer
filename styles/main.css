@@ -10,10 +10,14 @@
   margin: auto;
 
 }
+
 body {
     width: 90%;
     margin: auto;
     color: white;
     background-color: black;
     text-align: center;
+}
+tr {
+    margin-left: auto;
 }

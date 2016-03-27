@@ -1,7 +1,7 @@
+prompt("are you working?");
 
 document.addEventListener('DOMContentLoaded', function() {
   //run the code
-
 //call all the elements I think I need
   var racerTable = document.querySelector('.racer_table');
 //these vars below are redundent I think
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var player1Track = document.querySelector('#player1_strip');
   var player2Track = document.querySelector('#player2_strip');
 //  var playerPosition = document.querySelectorAll('.active');
-  var tablePosition = document.querySelectorAll("td");
+ // var tablePosition = document.querySelectorAll("td");
   var tracks = document.querySelectorAll("tr");
   var start1 = 1;
   var start2 =1;
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var restart = false;
 
 
-  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?");
+  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?")
 
 
 //create how long the track is
