@@ -3,6 +3,7 @@ text-align: center;
 margin: auto;
 color: white;
 background-image: url(space_background.png);
+background-size: cover;
 
 }
 
