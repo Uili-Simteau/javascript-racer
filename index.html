@@ -5,33 +5,20 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-    <script src="javascript.js"></script>
+    <script src="racer.js"></script>
 
 </head>
 <body>
-    <div class = "heading">
-        <h1>JS Space Racer</h1>
-    </div>
+<div class="container">
+    <div class = "heading"><h1>JS Space Racer</h1></div>
     <table class="racer_table">
-      <tr id="player1_strip">
+      <tr id="lane1">
         <td>Racer 1</td>
         <td class="active"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Planet X</td>
       </tr>
-      <tr id="player2_strip">
+      <tr id="lane2">
         <td>Racer 2</td>
         <td class="active"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td >Planet X</td>
       </tr>
     </table>
 
@@ -42,7 +29,13 @@
         <p>Star Racer 1 uses the <strong>'a'</strong> key to fly.<br>
         Star Racer 2 uses the <strong>'enter'</strong> key to fly.</p>
     </div>
-
+    <div>
+        <p class="hidden" id="racer1_wins"> Glactic control goes to Racer 1!</p>
+    </div>
+    <div>
+        <p class="hidden" id="racer2_wins"></p>
+    </div>
+</div>
 
 </body>
 </html>

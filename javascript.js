@@ -1,6 +1,6 @@
 console.log("hello");
 
-document.addEventListener('DOMContentLoaded', function() {
+documentdocument.addEventListener('DOMContentLoaded', function() {
   //run the code
 //call all the elements I think I need
   var racerTable = document.querySelector('.racer_table');
