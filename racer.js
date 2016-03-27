@@ -9,7 +9,7 @@ var lane2 = document.getElementById('lane2');
 var trackLength = prompt("How far away is the planet? 3 to 15 parsecs?");
 
 //generate track
-for (var j = 0;  < trackLength.length; j++) {
+for (var j = 0; j < trackLength.length; j++) {
     lane1.appendChild(document.createElement('td'));
     lane2.appendChild(document.createElement('td'));
 };

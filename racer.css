@@ -2,6 +2,7 @@ body {
 text-align: center;
 margin: auto;
 color: white;
+background-image: url();
 
 }
 
@@ -33,13 +34,19 @@ color: white;
 }
 
 #lane1 td.active {
-    background-image: url(../spaceracer2.png);
+    background-image: url(spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
 #lane2 td.active {
-    background-image: url(../spaceracer2.png);
+    background-image: url(spaceracer2.png);
+    background-image: no-repeat;
+    background-size: 45px;
+}
+
+.finish {
+    background-image: url(planet.png);
     background-image: no-repeat;
     background-size: 45px;
 }
