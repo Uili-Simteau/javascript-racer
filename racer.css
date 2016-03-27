@@ -1,3 +1,43 @@
 body {
+text-align: center;
+margin: auto;
+}
 
+.racer_table td {
+  background-color: black;
+  height: 30px;
+  width: 40px;
+
+.heading {
+    margin: auto;
+    text-align: center;
+    font-family: droid-sans; sans-serif;
+    font-size: 40px;
+    margin-top: -20px;
+}
+
+.instructions {
+    margin: auto;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.racer-table {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+#lane1 td.active {
+    background-image: url(../spaceracer2.png);
+    background-image: no-repeat;
+    background-size: 45px;
+}
+
+#lane2 td.active {
+    background-image: url(../spaceracer2.png);
+    background-image: no-repeat;
+    background-size: 45px;
 }
