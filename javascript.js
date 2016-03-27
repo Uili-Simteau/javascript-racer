@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var restart = false;
 
 
-  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?")
+  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?");
 
 
 
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     parsec.className = "finish";
                 };
 
-}
 
 restartGame()
 
