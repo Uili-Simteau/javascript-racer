@@ -7,6 +7,10 @@ background-size: cover;
 background-image: no-repeat;
 
 }
+.container {
+    margin: auto;
+
+}
 
 .racer_table td {
   background-color: black;
@@ -44,20 +48,20 @@ background-image: no-repeat;
 }
 
 #lane1 td.active {
-    background-image: url(spaceracer2.png);
+    background: url(spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
 #lane2 td.active {
-    background-image: url(spaceracer2.png);
+    background: url(spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
 td.finish {
     background-color: red;
-    background-image: url(earth1.png);
+    background: url(earth1.png);
     background-image: no-repeat;
     background-size: 45px;
 }
