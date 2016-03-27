@@ -9,7 +9,7 @@ background-image: no-repeat;
 }
 
 .racer_table td {
-  background-color: transparent;
+  background-color: black;
   height: 30px;
   width: 40px;
 
@@ -21,6 +21,18 @@ background-image: no-repeat;
     margin-top: -20px;
 }
 
+
+.hidden {
+    display: none;
+}
+
+#restart {
+    font color: black;
+    margin: auto;
+    font: lato, sans-serif;
+    background-color: white;
+}
+
 .instructions {
     margin: auto;
     margin-top: -20px;
@@ -29,27 +41,24 @@ background-image: no-repeat;
 
 .racer-table {
     margin: auto;
-    background-color: transparent;
 }
 
-#lane1 td .active {
-    background-image: url(/spaceracer2.png);
+#lane1 td.active {
+    background-image: url(spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
 #lane2 td.active {
-    background-image: url(/spaceracer2.png);
+    background-image: url(spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
-td .finish {
-    background-image: url(planet.png);
+td.finish {
+    background-color: red;
+    background-image: url(earth1.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
-.hidden {
-    display: none;
-}
