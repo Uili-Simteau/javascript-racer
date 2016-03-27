@@ -4,6 +4,7 @@ margin: auto;
 color: white;
 background-image: url(space_background.png);
 background-size: cover;
+background-image: no-repeat;
 
 }
 
@@ -31,7 +32,7 @@ background-size: cover;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    background-color: black;
+    background-color: transparent;
 }
 
 #lane1 td.active {

@@ -15,8 +15,8 @@ for (var j = 0; j < trackLength.length; j++) {
 };
 
 //initialise each player to a track
-var player1 = lane1.querySelectorQll('td');
-var player2 = lane2.querySelectorQll('td');
+var player1 = lane1.querySelectorAll('td');
+var player2 = lane2.querySelectorAll('td');
 
 //create finish line with 'finish' class.
 player1[trackLength].className = "finish";
