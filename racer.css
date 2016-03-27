@@ -28,10 +28,7 @@ background-image: no-repeat;
 }
 
 .racer-table {
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+    margin: auto;
     background-color: transparent;
 }
 
@@ -47,7 +44,7 @@ background-image: no-repeat;
     background-size: 45px;
 }
 
-.finish {
+td .finish {
     background-image: url(planet.png);
     background-image: no-repeat;
     background-size: 45px;
