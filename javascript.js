@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //these vars below are redundent I think
   var player1 = player1Track.querySelectorAll('td');
   var player2 = player2Track.querySelectorAll('td');
+  var playerTrack
   var player1Track = document.querySelector('#player1_strip');
   var player2Track = document.querySelector('#player2_strip');
 //  var playerPosition = document.querySelectorAll('.active');
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var tracks = document.querySelectorAll("tr");
   var start1 = 1;
   var start2 =1;
-  var race = document.addEventListener('keyup', updatePlayerPosition);
+  var race = document.addEventListener('keyup', selectPlayer, false);
   var lengthOfTrack = 7;
   var restart = false;
 
@@ -35,14 +36,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     parsec.className = "finish"
                 };
 
+}
 
 restartGame()
+
+  function selectPlayer() {
+    var player
+    if (event.which === 13) {
+        playerTrack = player1Track;
+        start = start1;
+    } else if (event.which === 97) {
+        playerTrack = player2Track;
+        start = start2;
+    }
+    updatePlayerPosition(playerTrack, start)
+
+
+
 //enacted everytime a key is released
-  function updatePlayerPosition(event) {
+  function updatePlayerPosition(playerTrack, start) {
     //if 'a' is pressed player 1
     if (event.which === 13) {
 //change position function is called on player 1, start position is incremented
-        changePosition(player1);
         if (player1Track[start1].className === "active") {
             player1Track[start1].className = "active";
             player1Track[start1-1].className = "";
