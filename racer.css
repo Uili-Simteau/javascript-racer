@@ -9,7 +9,7 @@ background-image: no-repeat;
 }
 
 .racer_table td {
-  background-color: black;
+  background-color: transparent;
   height: 30px;
   width: 40px;
 
@@ -32,14 +32,14 @@ background-image: no-repeat;
     background-color: transparent;
 }
 
-#lane1 td.active {
-    background-image: url(spaceracer2.png);
+#lane1 td .active {
+    background-image: url(/spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
 
 #lane2 td.active {
-    background-image: url(spaceracer2.png);
+    background-image: url(/spaceracer2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
@@ -48,4 +48,8 @@ td .finish {
     background-image: url(planet.png);
     background-image: no-repeat;
     background-size: 45px;
+}
+
+.hidden {
+    display: none;
 }

@@ -82,9 +82,9 @@ function restart() {
         player2[i].className = "";
     }
     player1[1].className = "active";
-    player1[trackLength].className = 'finish';
+    player1[trackLength].className = "finish";
     player2[1].className = "active";
-    player2[trackLength].className = 'finish';
+    player2[trackLength].className = "finish";
     button.className = "hidden";
     racer1_wins.className = "hidden";
     racer2_wins.className = "hidden";
