@@ -2,9 +2,7 @@
   background-color: black;
   height: 20px;
   width: 20px;
-  margin: auto;
-  text-align: center;
-  padding: auto;
+
 }
 
 .racer_table td.active {
@@ -17,6 +15,5 @@ body {
     margin: auto;
     color: white;
     background-color: black;
-    padding: auto;
     text-align: center;
 }

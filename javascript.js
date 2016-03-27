@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var restart = false;
 
 
-  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?"){
+  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?");
 
 
 //create how long the track is
@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     //set last cell in array as finish line
                     parsec.className = "finish"
-                }
-            };
+                };
+
 
 restartGame()
 //enacted everytime a key is released
