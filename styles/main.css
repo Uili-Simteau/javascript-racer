@@ -1,6 +1,6 @@
 .racer_table td {
   background-color: black;
-  height: 40px;
+  height: 30px;
   width: 40px;
 }
 
@@ -14,15 +14,15 @@
 
 }
 .racer_table #player1_strip td.active{
-    background-image: url(spaceracer1.png);
+    background-image: url(../spaceracer2.png);
     background-image: no-repeat;
-    background-size: 39px;
+    background-size: 45px;
 }
 
 .racer_table #player2_strip td.active{
-    background-image: url(spaceracer2.png);
+    background-image: url(../spaceracer2.png);
     background-image: no-repeat;
-    background-size: 39px;
+    background-size: 45px;
 }
 
 body {

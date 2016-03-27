@@ -1,4 +1,4 @@
-
+console.log("hello");
 
 document.addEventListener('DOMContentLoaded', function() {
   //run the code
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var restart = false;
 
 
-  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?");
+  lengthOfTrack = prompt("How far do you want to race? 1-20 parsecs?")
 
 
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         tracks[i].appendChild(parsec);
                     }
                     //set last cell in array as finish line
-                    parsec.className = "finish"
+                    parsec.className = "finish";
                 };
 
 }
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
 restartGame()
 
   function selectPlayer() {
-    var player
     if (event.which === 13) {
         playerTrack = player1Track;
         start = start1;
