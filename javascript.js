@@ -68,26 +68,26 @@ restartGame()
                 //laura code: when player reaches end, cel is not incremented
                 if (restart) {
                     restartGame()
-                } else {
+        } else {
                     race = document.removeEventlistener('keyup', updatePlayerPosition);
                 }
         }
         }
     //if enter is pressed, update changes on player 2
-        else if (event.which === 97) {
-            changePosition(player2);
-            if (player2Track[start2].className === "active") {
-                player2Track[start2].className = "active";
-                player2Track[start2-1].className = "";
-                start2 +=1;
+    else if (event.which === 97) {
+          //  changePosition(player2);
+        if (player2Track[start2].className === "active") {
+            player2Track[start2].className = "active";
+            player2Track[start2-1].className = "";
+            start2 +=1;
         }
-            else if (player1Track[start1].className === "finish") {
-                player1Track[start1-1].className = "";
-                alert("Congratulations Star Racer, you've won!");
-                restart = confirm("Play again?");
-                 if (restart) {
+        else if (player1Track[start1].className === "finish") {
+            player1Track[start1-1].className = "";
+            alert("Congratulations Star Racer, you've won!");
+            restart = confirm("Play again?");
+            if (restart) {
                     restartGame()
-                } else {
+        } else {
                     play = document.removeEventlistener('keyup', updatePlayerPosition);
                 }
             }
