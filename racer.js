@@ -32,12 +32,64 @@ var racer2_wins = document.getElementById('racer2_wins');
 var button = document.getElementById('restart');
 
 
+//start user expeience
+document.addEventListener('keyup', choosePlayer)
 
 
+/*assign event keys to each player, and progress them using
+class name active; change racer win class if the last cell
+class = 'active'*/
+function choosePlayer() {
+    if (event.which === 13) {
+        updatePlayerPosition(player1, p1)
+        p1++;
+        if (player1[trackLength].className === "finish") {
+            racer1_wins.className = "";
+            endGame();
+        }
+    } else if (event.which === 97) {
+        updatePlayerPosition(player2, p2)
+        p2++;
+        if (player2[trackLength].className === "finish") {
+            racer2_wins.className = "";
+            endGame();
+        }
+    }
+};
 
+/*update position by changing existing td to "" and the incremented
+one to "active" */
+function updatePlayerPosition(player, p) {
+    if (player[p].className === "active") {
+        player[p].className = "";
+        player[p+1].className = "active";
+    }
+};
 
+/* remove the 'keyup' eventlistener, reveal the button and add event
+listener to button for 'click'*/
+function endGame() {
+    document.removeEventListener('keyup', choosePlayer);
+    button.class = "";
+    button.addEventListener('click', restart);
+}
 
-
-
-
-})
+/*set everything back to the beginning, hide win statements, hide button
+add event listener back for 'keyup' choose player*/
+function restart() {
+    for (var i = 0; i < trackLength; i++) {
+        player1[i].className = "";
+        player2[i].className = "";
+    }
+    player1[1].className = "active";
+    player1[trackLength].className = 'finish';
+    player2[1].className = "active";
+    player2[trackLength].className = 'finish';
+    button.className = "hidden";
+    racer1_wins.className = "hidden";
+    racer2_wins.className = "hidden";
+    document.addEventListener('keyup', choosePlayer);
+    p1 = 1;
+    p2 = 1;
+}
+});
