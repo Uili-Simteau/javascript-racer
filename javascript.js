@@ -1,4 +1,4 @@
-prompt("are you working?");
+
 
 document.addEventListener('DOMContentLoaded', function() {
   //run the code
@@ -55,7 +55,7 @@ restartGame()
                 if (restart) {
                     restartGame()
                 } else {
-                    play = document.removeEventlistener('keyup', updatePlayerPosition);
+                    race = document.removeEventlistener('keyup', updatePlayerPosition);
                 }
         }
         }
