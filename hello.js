@@ -1,2 +1,0 @@
-longTrack = alert("hello");
-
