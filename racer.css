@@ -16,12 +16,14 @@ background-image: no-repeat;
   background-color: transparent;
   height: 30px;
   width: 40px;
+  margin: auto;
+  text-align: center;
 }
 
 .heading {
     margin: auto;
     text-align: center;
-    font-family: droid-sans; sans-serif;
+    font-family: lato, droid-sans; sans-serif;
     font-size: 40px;
     margin-top: -20px;
 }
@@ -48,6 +50,7 @@ background-image: no-repeat;
     margin: auto;
     text-align: center;
 }
+
 
 #lane1 td.active {
     background: url(spaceracer2.png);
