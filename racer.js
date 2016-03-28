@@ -40,14 +40,14 @@ document.addEventListener('keyup', choosePlayer)
 class name active; change racer win class if the last cell
 class = 'active'*/
 function choosePlayer() {
-    if (event.which === 13) {
+    if (event.which === 65) {
         updatePlayerPosition(player1, p1)
         p1++;
         if (player1[trackLength].className === "finish") {
             racer1_wins.className = "";
             endGame();
         }
-    } else if (event.which === 97) {
+    } else if (event.which === 13) {
         updatePlayerPosition(player2, p2)
         p2++;
         if (player2[trackLength].className === "finish") {
