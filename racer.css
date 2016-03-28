@@ -45,6 +45,7 @@ background-image: no-repeat;
 
 .racer-table {
     margin: auto;
+    text-align: center;
 }
 
 #lane1 td.active {
