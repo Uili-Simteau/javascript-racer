@@ -45,14 +45,14 @@ function choosePlayer() {
         p1++;
         if (player1[trackLength].className === "finish") {
             racer1_wins.className = "";
-            endGame();
+            stopGame();
         }
     } else if (event.which === 13) {
         updatePlayerPosition(player2, p2)
         p2++;
         if (player2[trackLength].className === "finish") {
             racer2_wins.className = "";
-            endGame();
+            stopGame();
         }
     }
 };
@@ -68,7 +68,7 @@ function updatePlayerPosition(player, p) {
 
 /* remove the 'keyup' eventlistener, reveal the button and add event
 listener to button for 'click'*/
-function endGame() {
+function stopGame() {
     document.removeEventListener('keyup', choosePlayer);
     button.class = "";
     button.addEventListener('click', restart);
