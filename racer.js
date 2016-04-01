@@ -6,11 +6,11 @@ var lane1 = document.getElementById('lane1');
 var lane2 = document.getElementById('lane2');
 var trackLength = 10;
 //prompt length of track from user
-//trackLength = prompt("How far away is the planet? 10to 15 parsecs");
+trackLength = prompt("How far away is the planet? 10to 15 parsecs");
 
 //trackLength;
 //generate track
-for (var j = 0; j < trackLength.length; j++) {
+for (var j = 0; j < trackLength; j++) {
     lane1.appendChild(document.createElement('td'));
     lane2.appendChild(document.createElement('td'));
 };
@@ -19,9 +19,10 @@ for (var j = 0; j < trackLength.length; j++) {
 var player1 = lane1.querySelectorAll('td');
 var player2 = lane2.querySelectorAll('td');
 
-//create finish line with 'finish' class.
-player1[trackLength].className = "finish";
-player2[trackLength].className = "finish";
+/*create finish line with 'finish' class. identitfies last td cell
+and class names it "fihish"*/
+player1[trackLength-1].className = "finish";
+player2[trackLength-1].className = "finish";
 
 //initialise player positions on track.
 var p1 = 1;
@@ -35,7 +36,7 @@ var won = document.getElementById('won');
 
 
 //start user expeience
-document.addEventListener('keyup', chooseFleet)
+document.addEventListener('keyup', chooseFleet, false)
 
 
 /*assign event keys to each player, and progress them using
@@ -60,7 +61,7 @@ function updateFleetPosition(player, p) {
     if (player[p].className === "active") {
         player[p].className = "";
         player[p+1].className = "active";
-    } else if (player[p].className === player[p][trackLength]) {
+    } else if (player[p] === player[p][trackLength]) {
         won.className = "";
             relaunch();
     }

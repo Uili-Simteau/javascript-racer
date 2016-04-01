@@ -20,7 +20,7 @@ table {
 .racer_table td {
   background-color: transparent;
   height: 150px;
-  width: 225px;
+  width: 100px;
   margin: auto;
   text-align: center;
 }
