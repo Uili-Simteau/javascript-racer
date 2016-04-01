@@ -35,26 +35,28 @@ var won = document.getElementById('won');
 
 
 //start user expeience
-document.addEventListener('keyup', choosePlayer)
+document.addEventListener('keyup', chooseFleet)
 
 
 /*assign event keys to each player, and progress them using
 class name active; change racer win class if the last cell
 class = 'active'*/
-function choosePlayer() {
+function chooseFleet() {
     for(var i = 0; i >= trackLength; i++) {
-        if (event.which === 65) {
-            updatePlayerPosition(player1, p1)
+        for (event.which === 65) {
+            updateFleetPosition(player1, p1)
             p1++;
-        } else if (event.which === 13) {
-        updatePlayerPosition(player2, p2);
+        }
+        };
+    for (event.which === 13) {
+        updateFleetPosition(player2, p2);
         p2++;
     }
 };
 
 /*update position by changing existing td to "" and the incremented
 one to "active" */
-function updatePlayerPosition(player, p) {
+function updateFleetPosition(player, p) {
     if (player[p].className === "active") {
         player[p].className = "";
         player[p+1].className = "active";
