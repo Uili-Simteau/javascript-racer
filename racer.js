@@ -43,15 +43,15 @@ class name active; change racer win class if the last cell
 class = 'active'*/
 function chooseFleet() {
     for(var i = 0; i >= trackLength; i++) {
-        for (event.which === 65) {
+         if(event.which === 65) {
             updateFleetPosition(player1, p1)
             p1++;
-        }
-        };
-    for (event.which === 13) {
-        updateFleetPosition(player2, p2);
+        } else if (event.which === 13) {
+            updateFleetPosition(player2, p2);
         p2++;
     }
+        };
+
 };
 
 /*update position by changing existing td to "" and the incremented
