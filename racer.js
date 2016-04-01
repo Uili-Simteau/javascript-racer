@@ -6,7 +6,8 @@ var lane1 = document.getElementById('lane1');
 var lane2 = document.getElementById('lane2');
 
 //prompt length of track from user
-var trackLength = prompt("How far away is the planet? 3 to 15 parsecs?");
+var trackLength = prompt("How far away is the planet? (10 to 30 parsecs)");
+trackLength;
 
 //generate track
 for (var j = 0; j < trackLength; j++) {
@@ -26,10 +27,11 @@ player2[trackLength].className = "finish";
 var p1 = 1;
 var p2 = 1;
 
-var racer1_wins = document.getElementById('racer1_wins');
-var racer2_wins = document.getElementById('racer2_wins');
+var won = document.getElementById('won');
 
-var button = document.getElementById('restart');
+
+//don't need this with the alert.
+//var button = document.getElementById('restart');
 
 
 //start user expeience
@@ -40,20 +42,14 @@ document.addEventListener('keyup', choosePlayer)
 class name active; change racer win class if the last cell
 class = 'active'*/
 function choosePlayer() {
-    if (event.which === 65) {
-        updatePlayerPosition(player1, p1)
-        p1++;
-        if (player1[trackLength].className === "finish") {
-            racer1_wins.className = "";
-            stopGame();
+    for(var i = 0; i >= trackLength; i++) {
+        if (event.which === 65) {
+            updatePlayerPosition(player1, p1)
+            p1++;}
         }
     } else if (event.which === 13) {
         updatePlayerPosition(player2, p2)
         p2++;
-        if (player2[trackLength].className === "finish") {
-            racer2_wins.className = "";
-            stopGame();
-        }
     }
 };
 
@@ -63,33 +59,16 @@ function updatePlayerPosition(player, p) {
     if (player[p].className === "active") {
         player[p].className = "";
         player[p+1].className = "active";
+    } else if (player[p].className === [p][trackLength]) {
+        won.className = "";
+            relaunch();
     }
 };
 
-/* remove the 'keyup' eventlistener, reveal the button and add event
-listener to button for 'click'*/
-function stopGame() {
-    document.removeEventListener('keyup', choosePlayer);
-    button.class = "";
-    button.addEventListener('click', restart);
+
+function relaunch() {
+    if(confirm("Relaunch this Mission?"));
+    window.location.reload();
 }
 
-/*set everything back to the beginning, hide win statements, hide button
-add event listener back for 'keyup' choose player*/
-function restart() {
-    for (var i = 0; i < trackLength; i++) {
-        player1[i].className = "";
-        player2[i].className = "";
-    }
-    player1[1].className = "active";
-    player1[trackLength].className = "finish";
-    player2[1].className = "active";
-    player2[trackLength].className = "finish";
-    button.className = "hidden";
-    racer1_wins.className = "hidden";
-    racer2_wins.className = "hidden";
-    document.addEventListener('keyup', choosePlayer);
-    p1 = 1;
-    p2 = 1;
-}
 });
