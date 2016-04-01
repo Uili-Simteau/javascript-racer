@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
 //load track for each player
 var lane1 = document.getElementById('lane1');
 var lane2 = document.getElementById('lane2');
-
+var trackLength = 10;
 //prompt length of track from user
-var trackLength = prompt("How far away is the planet? (10 to 30 parsecs)");
-trackLength;
+//trackLength = prompt("How far away is the planet? 10to 15 parsecs");
 
+//trackLength;
 //generate track
-for (var j = 0; j < trackLength; j++) {
+for (var j = 0; j < trackLength.length; j++) {
     lane1.appendChild(document.createElement('td'));
     lane2.appendChild(document.createElement('td'));
 };
@@ -45,10 +45,9 @@ function choosePlayer() {
     for(var i = 0; i >= trackLength; i++) {
         if (event.which === 65) {
             updatePlayerPosition(player1, p1)
-            p1++;}
-        }
-    } else if (event.which === 13) {
-        updatePlayerPosition(player2, p2)
+            p1++;
+        } else if (event.which === 13) {
+        updatePlayerPosition(player2, p2);
         p2++;
     }
 };
@@ -59,16 +58,15 @@ function updatePlayerPosition(player, p) {
     if (player[p].className === "active") {
         player[p].className = "";
         player[p+1].className = "active";
-    } else if (player[p].className === [p][trackLength]) {
+    } else if (player[p].className === player[p][trackLength]) {
         won.className = "";
             relaunch();
     }
 };
 
-
 function relaunch() {
-    if(confirm("Relaunch this Mission?"));
+    if(confirm("Relaunch this Mission?")){
     window.location.reload();
 }
-
+};
 });

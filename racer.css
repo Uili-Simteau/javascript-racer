@@ -59,7 +59,7 @@ table {
 
 
 #lane1 td.active {
-    background: url(spaceracer2.png);
+    background-im: url(fighterspr1.png);
     background-image: no-repeat;
     background-size: 45px;
 }
