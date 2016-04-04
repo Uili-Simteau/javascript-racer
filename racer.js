@@ -15,16 +15,16 @@ for (var j = 0; j < trackLength; j++) {
     lane2.appendChild(document.createElement('td'));
 };
 
-//initialise each player to a track
+//initialize each player to a track
 var player1 = lane1.querySelectorAll('td');
 var player2 = lane2.querySelectorAll('td');
 
-/*create finish line with 'finish' class. identitfies last td cell
-and class names it "fihish"*/
+/*create finish line with 'finish' class. identifies last td cell
+and class names it "finish"*/
 player1[trackLength-1].className = "finish";
 player2[trackLength-1].className = "finish";
 
-//initialise player positions on track.
+//initialize player positions on track.
 var p1 = 1;
 var p2 = 1;
 
@@ -35,7 +35,7 @@ var won = document.getElementById('won');
 //var button = document.getElementById('restart');
 
 
-//start user expeience
+//start user experience
 document.addEventListener('keyup', chooseFleet, false)
 
 
@@ -43,15 +43,13 @@ document.addEventListener('keyup', chooseFleet, false)
 class name active; change racer win class if the last cell
 class = 'active'*/
 function chooseFleet() {
-    for(var i = 0; i >= trackLength; i++) {
-         if(event.which === 65) {
-            updateFleetPosition(player1, p1)
-            p1++;
-        } else if (event.which === 13) {
-            updateFleetPosition(player2, p2);
+       if(event.which === 65) {
+        updateFleetPosition(player1, p1)
+        p1++;
+    } else if (event.which === 13) {
+        updateFleetPosition(player2, p2);
         p2++;
-    }
-        };
+    };
 
 };
 
@@ -63,13 +61,13 @@ function updateFleetPosition(player, p) {
         player[p+1].className = "active";
     } else if (player[p] === player[p][trackLength]) {
         won.className = "";
-            relaunch();
+        relaunch();
     }
 };
 
 function relaunch() {
     if(confirm("Relaunch this Mission?")){
-    window.location.reload();
-}
+        window.location.reload();
+    }
 };
 });
