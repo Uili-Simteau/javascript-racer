@@ -46,11 +46,20 @@ function chooseFleet() {
        if(event.which === 65) {
         updateFleetPosition(player1, p1)
         p1++;
-    } else if (event.which === 13) {
+        if (player1[trackLength-1].className === "active") {
+            won.className = "";
+            relaunch();
+        }
+
+    }
+    else if (event.which === 13) {
         updateFleetPosition(player2, p2);
         p2++;
-    };
-
+        if (player2[trackLength-1].className === "active") {
+            won.className = "";
+            relaunch();
+    }
+}
 };
 
 /*update position by changing existing td to "" and the incremented
@@ -66,7 +75,7 @@ function updateFleetPosition(player, p) {
 };
 
 function relaunch() {
-    if(confirm("Relaunch this Mission?")){
+    if(confirm("The planets are destroyed! Relaunch this Mission?")){
         window.location.reload();
     }
 };
