@@ -76,7 +76,6 @@ function updateFleetPosition(player, p) {
 function relaunch() {
     if(confirm("The planets are destroyed! Relaunch this Mission?")){
         window.location.reload();
-    //prompt length of track from user
-trackLength = prompt("How far away is the planet? 10 to 15 parsecs");}
+    }
 };
 });

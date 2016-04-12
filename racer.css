@@ -5,6 +5,7 @@ color: white;
 background-image: url(space_background.png);
 background-size: cover;
 background-image: no-repeat;
+font-family: "Orbitron", sans-serif;
 }
 
 table {
@@ -28,7 +29,7 @@ table {
 .heading {
     margin: auto;
     text-align: center;
-    font-family: lato, droid-sans; sans-serif;
+    font-family: "Orbitron"; sans-serif;
     font-size: 40px;
     margin-top: -20px;
 }
