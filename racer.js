@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 //load track for each player
 var lane1 = document.getElementById('lane1');
 var lane2 = document.getElementById('lane2');
-var trackLength = 10;
-//prompt length of track from user
-trackLength = prompt("How far away is the planet? 10to 15 parsecs");
+var trackLength = 20;
+
 
 //trackLength;
 //generate track
@@ -77,6 +76,7 @@ function updateFleetPosition(player, p) {
 function relaunch() {
     if(confirm("The planets are destroyed! Relaunch this Mission?")){
         window.location.reload();
-    }
+    //prompt length of track from user
+trackLength = prompt("How far away is the planet? 10 to 15 parsecs");}
 };
 });

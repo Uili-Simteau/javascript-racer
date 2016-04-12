@@ -63,7 +63,7 @@ table {
 }
 
 #lane2 td.active {
-    background: url(spaceracer2.png);
+    background: url(spaceship2.png);
     background-image: no-repeat;
     background-size: 45px;
 }
